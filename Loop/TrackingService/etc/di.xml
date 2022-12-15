@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright   Copyright 2022 © jegan, Inc. All rights reserved.
+ * @license     See COPYING.txt for license details.
+ * @package     Loop_TrackingService
+ * @author      jegan jeyaraman <jeganjeyaraman.yt@gmail.com>
+ * @link        https://jegan.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Loop\TrackingService\Api\TrackRepositoryInterface" type="Loop\TrackingService\Model\Api\TrackRepository"/>
+
+    <preference for="Loop\TrackingService\Model\ConfigInterface" type="Loop\TrackingService\Model\Config" />
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="loop_track_listing_data_source" xsi:type="string">Loop\TrackingService\Model\ResourceModel\Track\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Loop\TrackingService\Model\ResourceModel\Track\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">tracking_information</argument>
+            <argument name="resourceModel" xsi:type="string">Loop\TrackingService\Model\ResourceModel\Track</argument>
+        </arguments>
+    </virtualType>
+</config>

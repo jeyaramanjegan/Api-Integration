@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright   Copyright 2022 © jegan, Inc. All rights reserved.
+ * @license     See COPYING.txt for license details.
+ * @package     Loop_TrackingService
+ * @author      jegan jeyaraman <jeganjeyaraman.yt@gmail.com>
+ * @link        https://jegan.com/
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <body>
+        <referenceContainer name="content">
+            <uiComponent name="loop_track_listing"/>
+        </referenceContainer>
+    </body>
+</page>

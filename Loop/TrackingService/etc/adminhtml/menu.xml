@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright   Copyright 2022 © jegan, Inc. All rights reserved.
+ * @license     See COPYING.txt for license details.
+ * @package     Loop_TrackingService
+ * @author      jegan jeyaraman <jeganjeyaraman.yt@gmail.com>
+ * @link        https://jegan.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Loop_TrackingService::trackingservice" title="Loop Tracking" translate="title" module="Loop_TrackingService" sortOrder="20" dependsOnModule="Loop_TrackingService" resource="Loop_TrackingService::trackingservice"/>
+        <add id="Loop_TrackingService::trackingservice_configuration" title="Settings" translate="title" module="Loop_TrackingService" sortOrder="10" parent="Loop_TrackingService::trackingservice" action="adminhtml/system_config/edit/section/trackingservice/" resource="Loop_TrackingService::trackingservice_configuration"/>
+        <add id="Loop_TrackingService::trackingservice_manage" title="Loop Tracking" translate="title" module="Loop_TrackingService" sortOrder="10" parent="Loop_TrackingService::trackingservice" action="loop/track/index/" resource="Loop_TrackingService::trackingservice_manage"/>
+    </menu>
+</config>

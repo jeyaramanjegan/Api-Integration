@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright   Copyright 2022 © jegan, Inc. All rights reserved.
+ * @license     See COPYING.txt for license details.
+ * @package     Loop_TrackingService
+ * @author      jegan jeyaraman <jeganjeyaraman.yt@gmail.com>
+ * @link        https://jegan.com/
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_cart_add_product_complete">
+        <observer name="update_cart_session" instance="Loop\TrackingService\Observer\Quote\Item"/>
+    </event>
+</config>
